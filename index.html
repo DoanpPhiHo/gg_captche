@@ -13,12 +13,14 @@
     </style> -->
 </head>
 
-<body onload="onLoad()" style='background-color: aqua; width: 304px; height: 78px; margin: 0;'>
-    <form action="?" method="POST">
-        <div class="g-recaptcha" data-sitekey="6Lc7IN0cAAAAAM7Biw-dO-Ib4KhCsy3GHoZ9a9uo"
-            data-callback="captchaCallback" size: "compact"></div>
+<body onload="onLoad()" style='background-color: aqua; margin: 0;'>
+    <div id="capcha-css">
+        <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6Lc7IN0cAAAAAM7Biw-dO-Ib4KhCsy3GHoZ9a9uo"
+                data-callback="captchaCallback"></div>
 
-    </form>
+        </form>
+    </div>
     <script>
 
         function getParameterByName(name, url = window.location.href) {
@@ -47,11 +49,10 @@
             console.log('hehe')
             var width = getParameterByName('width')
             console.log(width)
-            var widthCurrent = (Number.parseFloat(width) / 304)
-            // var height = getParameterByName('height')
-            // var color = getParameterByName('color')
-            document.body.style.transformOrigin = '0 0';
-            document.body.style.transform = 'scale(' + widthCurrent + ')';
+            var widthCurrent = window.innerWidth / 304
+            console.log(widthCurrent)
+            document.getElementById("capcha-css").style.transformOrigin = '0 0';
+            document.getElementById("capcha-css").style.transform = 'scale(' + widthCurrent + ')';
         }
     </script>
 </body>
