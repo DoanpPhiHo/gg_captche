@@ -47,7 +47,7 @@
             console.log('hehe')
             var width = getParameterByName('width')
             console.log(width)
-            var widthCurrent = 304 / Number.parseFloat(width)
+            var widthCurrent = (Number.parseFloat(width) / 304) + 1
             // var height = getParameterByName('height')
             // var color = getParameterByName('color')
             document.body.style.transformOrigin = '0 0';
