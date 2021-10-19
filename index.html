@@ -5,12 +5,7 @@
 <head>
     <title>reCAPTCHA</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!-- <style>
-        .g-recaptcha {
-            transform: scale(1.2);
-            transform-origin: 0 0;
-        }
-    </style> -->
+    </style>
 </head>
 
 <body onload="onLoad()" style='background-color: aqua; margin: 0;'>
@@ -50,9 +45,9 @@
             var width = getParameterByName('width')
             console.log(width)
             var widthCurrent = window.innerWidth / 304
-            console.log(widthCurrent)
-            document.getElementById("capcha-css").style.transformOrigin = '0 0';
-            document.getElementById("capcha-css").style.transform = 'scale(' + widthCurrent + ')';
+            console.log(window.innerWidth, widthCurrent)
+            // document.getElementById("capcha-css").style.transformOrigin = '0 0';
+            // document.getElementById("capcha-css").style.transform = 'scale(' + widthCurrent + ')';
         }
     </script>
 </body>
