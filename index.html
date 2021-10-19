@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {
+                var response = grecaptcha.getResponse();
+                if (response.length == 0) {
+                    alert('Please check the Captcha');
+                    return false;
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            grecaptcha.render('html_element', {
+                'sitekey': 'UPDATE YOUR SITE KEY HERE'
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <form
+        action="http://mykuttywap.in/2013-mp3/dl/load/Malayalam%20Mp3/Malayalam%20(2015)/Maalgudi%20Days/Nepredskazuuye%20Maa.mp3"
+        method="post">
+        <div id="html_element"></div>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+</body>
+
+</html>
