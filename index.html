@@ -17,7 +17,8 @@
     <script>
         function captchaCallback(response) {
             if (typeof Captcha !== "undefined") {
-                Captcha.postMessage(response);
+                console.log('post message')
+                Captcha.postMessage(response)
             }
         }
     </script>
