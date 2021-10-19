@@ -16,9 +16,15 @@
     </form>
     <script>
         function captchaCallback(response) {
-            if (typeof Captcha !== "undefined") {
-                console.log('post message')
-                Captcha.postMessage(response)
+            console.log(response)
+            try {
+                console(typeof Captcha)
+                if (typeof Captcha !== "undefined") {
+                    console.log('post message')
+                    Captcha.postMessage(response)
+                }
+            } catch (error) {
+                console.log(error)
             }
         }
     </script>
